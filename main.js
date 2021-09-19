@@ -35,8 +35,12 @@ xhr.onload = function () {
             <div class="col">
                 <img class="img-fluid border border-success" src="${element.media}" alt="Image">
             </div>
-            <div class="col my-2 py-2">
+            <div class="col mt-2 pt-1">
                 <h5 class="m-0">${element.title}</h5>
+            </div>
+            <div class="col mb-2 pb-1">
+                <a href="https://${element.clean_url}" target="_blank" class="m-0 text-muted" style="font-size:13px;">${element.clean_url}</a>
+                <span class="m-0 text-muted" style="font-size:13px;"> &#8226; ${element.published_date.slice(0,10).split('-').reverse().join("-")}</span>
             </div>
             <div class="col">
                 <a href="${element.link}" target="_blank" class="btn btn-success w-100">Show more</a>
